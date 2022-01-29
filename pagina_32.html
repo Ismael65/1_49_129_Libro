@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 32</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function cuenta(){
+                document.write("Me han llamado con " + cuenta.arguments.length + " argumentos <P>");
+                
+                for(i=0; i < cuenta.arguments.length; i++)
+                    document.write("Argumentos " + i + " : " + cuenta.arguments[i] + "<br>");
+            }
+        </script>
+    </head>
+    <body>
+        
+        <script>
+            cuenta("Hola", "a", "todos");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 83</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="UnForm">
+            <input type="radio" name="Grupo1" value="Valor1">Radio 1.1<br>
+            <input type="radio" name="Grupo1" value="Valor2">Radio 1.2<br>
+            <input type="radio" name="Grupo1" value="Valor3">Radio 1.3<br>
+            
+            <br>
+            
+            <input type="radio" name="Grupo2" value="Valor1mas">Radio 2.1<br>
+            <input type="radio" name="Grupo2" value="Valor2mas">Radio 2.2<br>
+            <input type="radio" name="Grupo2" value="Valor3mas">Radio 2.3<br>
+        </form>
+        
+        <script>
+            var i;
+            with(document){
+                for(i=0; i < UnForm.Grupo1.length; i++)
+                    write("<br>Radio nº " + i + " del grupo 1. Valor: " + UnForm.Grupo1[i].value);
+                
+                write("<br>");
+                
+                for(i=0; i < UnForm.Grupo2.length; i++)
+                    write("<br> Radio nº " + i + " del grupo 2. Valor: " + UnForm.Grupo2[i].value);
+            }
+        </script>
+    </body>
+</html>

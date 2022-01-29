@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 62</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function a(){
+                var opciones = "left=100, top=100, width=250, height=150";
+                mi_ventana = window.open("", "", opciones);
+                mi_ventana.moveBy(100, 100);
+                mi_ventana.moveTo(400, 400);
+                mi_ventana.document.write("Una prueba de abrir ventanas");
+            }
+        </script>
+    </head>
+    <body>
+        
+        <script>
+            a();
+        </script>
+    </body>
+</html>

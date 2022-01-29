@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 74</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function CambiaTamImagen(queImagen, queOpcion, queEscala){
+                var i = 0, enc = false, Escala;
+                while((i < queOpcion.length) && !enc)
+                    if(queOpcion[i++].checked) enc = true;
+                
+                Escala = parseFloat(queEscala.value);                
+                
+                if(isNaN(Escala) || (!isNaN(Escala) && (Escala < 0)))
+                    Escala = 1;
+                
+                queImagen.width *= 1;
+                queImagen.height *= 1;
+                
+                switch(i-1){
+                    case 0:
+                        queImagen.width *= Escala;
+                        break;
+                    case 1:
+                        queImagen.height *= Escala;
+                        break;
+                    case 2:
+                        queImagen.width *= Escala;
+                        queImagen.height *= Escala;
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        Aquí tienes algunas opciones para trastear con la imagen: <p>
+            
+        <FORM>
+            <input type="radio" name="Escalar" value="EnX" checked>
+            Escalar la imagen en X. <br>
+            <input type="radio" name="Escalar" value="EnY">
+            Escalar la imagen en Y. <br>
+            <input type="radio" name="Escalar" value="EnAmbos">
+            Escalar la imagen (ambos ejes). </p>
+            
+            factor (mayor o igual que cero):
+            <input type="text" size="10" maxlength="15" name="Escala"><p>
+                
+                <input type="button" value="Aplicar cambios" onclick="CambiaTamImagen(this.form.Imagen, 
+                            this.form.Escalar, this.form.Escala);"></p>
+            
+            <center><img src="imagen/diablo.png" name="Imagen"></center>
+        </FORM>
+    </body>
+</html>

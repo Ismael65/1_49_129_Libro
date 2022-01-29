@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 48</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function a(){
+                var cad = "Hola mundo", i;
+                var ja = new Array();
+                
+                ja = cad.split("o");
+                
+                with(document){
+                    write("La cadena es: " + cad + "<br>");
+                    write("Longitud de la cadena: " + cad.length + "<br>");
+                    write("Haciendola ancla: " + cad.anchor("b") + "<br>");
+                    write("En grande: " + cad.big() + "<br>");
+                    write("Parpadea: " + cad.blink() + "<br>");
+                    write("Caracter 3 es: " + cad.charAt(3) + "<br>");
+                    write("Fuente FIXED: " + cad.fixed() + "<br>");
+                    write("De color: " + cad.fontcolor("#ff0000") + "<br>");
+                    write("De color: " + cad.fontcolor("salmon") + "<br>");
+                    write("Tamaño 7: " + cad.fontsize(7) + "<br>");
+                    write("<i>orl</i> esta en la posicion: " + cad.indexOf("orl") + "<br>");
+                    write("<br> En cursiva: " + cad.italics() + "<br>");
+                    write("La primera <i>l</i> esta, empezando a contar por detras,");
+                    write("en la posición: " + cad.lastIndexOf("l") + "<br>");
+                    write("Haciendola enlace: " + cad.link("doc.html") + "<br>");
+                    write("En pequeño: " + cad.small() + "<br>");
+                    write("Tachada: " + cad.strike() + "<br>");
+                    write("Subindice: " + cad.sub() + "<br>");
+                    write("Superindice: " + cad.sup() + "<br>");
+                    write("Minusculas: " + cad.toLowerCase() + "<br>");
+                    write("Mayusculas: " + cad.toUpperCase() + "<br>");
+                    write("Subcadena entre los caracteres 3 y 10: ");
+                    write(cad.substring(2, 10)  + "<br>");
+                    write("Entre los catacteres 10 y 3: " + cad.substring(10, 2) + "<br>");
+                    write("Subcadena resultante de separar por las <b>o</b><br>");
+                    
+                    for(i=0; i <ja.length; i++)
+                        write(ja[i] + "<br>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <script>
+            a();
+        </script>
+    </body>
+</html>

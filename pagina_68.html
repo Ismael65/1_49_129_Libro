@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 68</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        Déjame que te dija algunas cosas sobre tu <tt>navigator</tt>: <p>
+        
+        <script>
+            var Explorer = navigator.languaje ? false : true;
+            
+            with(document){
+                write("Por una parte, navigator.appCodeName = " + navigator.appCodeName + "<br>");
+                write("Por otro lado, navigator.appName = " + navigator.appName + "<br>");
+                write("Además, navigator.appVersion = " + navigator.appVersion + "<br>");
+                
+                write("<br>");
+                
+                if(Explorer)
+                    write("Por si fuera poco, navigator.systemLanguage = " + navigator.systemLanguage + "<br>");
+                else
+                    write("Por si fuera poco, navigator.Language = " + navigator.language + "<br>");
+                    write("y ahí no termina, pues navigator.mimeTypes = " + navigator.mimeTypes + "<br>");
+                    write("Pero es que también navigator.platform = " + navigator.platform + "<br>");
+                    write("No olvidemos, por otro lado, que navigator.plugins = " + navigator.plugins + "<br>");
+                    write("Finalmente, pero no menos importante, navigator.userAgent = " + navigator.userAgent + "<br>");
+                
+            }
+        </script>
+    </body>
+</html>

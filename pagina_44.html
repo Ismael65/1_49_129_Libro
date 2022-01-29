@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 44</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            var PI = 3.14159265359;
+            
+        /* En primer lugar creamos la clase Circulo, cuyo constructor toma el mismo nombre
+             * y al que que se le pasará un parámetro cuando instanciemos objetos*/
+            
+            function circulo(radio){
+                this.radio = radio;
+                this.area = area;
+                this.longitud = longitud;                
+            }
+            /* Definimos las funciones que estaran asociadas a los objetos de tipo circulo */
+            
+            function area(){
+                var area = PI * this.radio * this.radio;
+                alert("El área es: " + area);
+            }
+            function longitud(){
+                var longitud = 2 * PI * this.radio;
+                alert("La longitud es: " + longitud);
+            }
+            /* Esta función sirve para probar la creación de los objetos*/
+            function crea_dos_circulos(){
+                var circ1 = new circulo(1);
+                var circ2 = {radio:2, area:area, longitud:longitud};
+                
+                circ1.area();
+                circ1.longitud();
+                circ2.area();
+                circ2.longitud();
+                circ1.radio = 3;  // cambiamos el valor del radio a cric1
+                circ1.area();
+                circ1.nombre = "Soy el circulo 1"; // Añadimos un nuevo atributi a circ1
+                alert(circ1.nombre);
+                alert(circ2.nombre); // Y comprobamos que circ1 NO lo tiene
+            }
+            
+        </script>
+    </head>
+    <body onLoad="crea_dos_circulos();">
+        
+    </body>
+</html>

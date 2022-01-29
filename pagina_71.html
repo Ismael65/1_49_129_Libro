@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 71</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+           function CambiarColorFondoDoc(radioBtn){
+               var i = 0, enc = false;
+               while((i < radioBtn.length) && !enc){
+                   if(radioBtn[i].checked) enc = true;
+                   i++;
+               }
+               document.bgColor = radioBtn[i-1].value;
+           }
+           function VerFechaUltimaModificacion(){ alert("Ultima Modificación: " + document.lastModified); }
+           function VerTitulo(){ alert("Título del documento: " + document.title); }
+        </script>
+    </head>
+    <body>
+        
+        Quiero: <p>
+        <ol>
+            <li>Ver la <a href="javascript:VerFechaUltimaModificacion();">fecha de 
+                    la última modificación</a>hecha al documento</li>
+            <li>Cambiar color de fondo: <p></li>
+            <form>
+                <input type="radio" name="Color" value="silver" checked>Plata<br>
+                <input type="radio" name="Color" value="red">Rojo<br>
+                <input type="radio" name="Color" value="lime">Lima<br>
+                <input type="radio" name="Color" value="navy">Azul marino<br>
+                <input type="radio" name="Color" value="white">Blanco<br>
+                <input type="radio" name="Color" value="orange">Naranja<br>
+                <input type="radio" name="Color" value="yellow">Amarillo<br>
+                <input type="button" value="Cambiar Color" onclick="CambiarColorFondoDoc(this.form.Color);">
+            </form>
+            <li>Ver el <a href="javascript:VerTitulo();">título del documento</a></li>
+        </ol>
+    </body>
+</html>

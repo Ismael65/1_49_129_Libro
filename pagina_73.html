@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 73</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        Recorramos todos los enlaces que vemos a continuación, y a ver que nos dice
+        JavaScript de sus propiedades: <p>
+            
+            <a href="EnlaceFalsoM.html">Enlace falso número M</a><br>
+            <a name="EnlaceFalso1" target="A">Enlace falso número 1</a><br>
+            <a name="EnlaceFalso2">Enlace falso número 2</a></p><br>
+        
+        <script>
+            var i;
+            for(i=0; i < document.anchors.length; i++)
+                with(document){
+                    write("anchors[' + i + '].name = " + anchors[i].name + "<br>");
+                    write("anchors[' + i + '].target = " + anchors[i].target + "<br>");                    
+                }
+        </script>
+    </body>
+</html>

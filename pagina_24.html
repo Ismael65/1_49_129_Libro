@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 24</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function proceder(){
+                var opcion, valor = 100;
+                opcion = prompt("Elige un número de descuento","1");
+                /* Nos aseguramos de que está en el rango correcto de opciones */
+                parseInt(opcion);
+                if(opcion < 1 || opcion > 4) opcion = 1;
+                
+                switch(opcion){
+                    case "1":
+                        valor *= 0.95;
+                        break;
+                    case "2":
+                        valor *= 0.9;
+                        break;
+                    case "3":
+                        valor *= 0.85;
+                        break;
+                    case "4":
+                        valor *= 0.8;
+                        break;
+                    default:
+                        valor *=1;
+                        break;
+                }
+                alert("Tu descuento: " + valor);
+            }
+        </script>
+    </head>
+    <body>
+        
+        Elige un descuento a realizar al valor 100: <p>
+        <ol>
+            <li>5%</li>
+            <li>10%</li>
+            <li>15%</li>
+            <li>20%</li>
+        </ol>
+        
+        <form>
+            <input type="button" onclick="proceder();" value="Calcular"
+        </form>
+    </body>
+</html>

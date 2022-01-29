@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 28</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <script>
+            var v = new Array("1", "8", "9", "3", "5", "4", "6", "32");
+            var numero, i, enc;
+            numero = prompt("Introduce un número", "");
+            enc = false;
+            i = 0;
+            while((i < v.length) && !enc){
+                if(v[i] == numero) enc = true;
+                i++;
+            }
+            if(enc)
+                alert("El número " + numero + " está en el vector \n" + " en la posición " + (i - 1));
+            else
+                alert("El número " + numero + " NO está en el vector");
+            
+        </script>
+    </body>
+</html>

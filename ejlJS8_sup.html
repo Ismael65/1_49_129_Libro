@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Frame Superior</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+        function EscribirEnFrame(frame, texto){
+            var QueFrame;
+            
+            QueFrame = frame[0].checked ? top.Izquierdo : top.Derecho;
+            QueFrame.document.write(texto);
+        }
+    </script>
+    </head>
+    <body>
+        
+        Escribe un texto, elige el frame, y pulsa el botón para que se escriba el texto
+            en el frame: <p>
+        <center><form>
+                texto:<input type="text" size="20" maxlength="50" name="Palabras"><br>
+                frame:<input type="radio" name="frameElegido" value="Izquierdo" checked>Izquierdo
+                      <input type="radio" name="frameElegido" value="Derecho">Derecho<br>
+                      <input type="button" value="Escribir" onclick="EscribirEnFrame(this.form.frameElegido,
+                            this.form.Palabras.value);">
+            </form></center>
+    </body>
+</html>

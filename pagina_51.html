@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 51</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <script>
+            function a(){
+                var j = new Array(2);
+                var h = new Array(1);
+                var i = new Array(1, "Hola", 3);
+                var b = new Array("Palabra", "Letra", "Amor", "Color", "Cariño");
+                var c = new Array("Otra cadena con palabras");
+                var d = new Array(false);
+                
+                j[0] = new Array(3);
+                j[1] = new Array(2);
+                
+                j[0][0] = 0; j[0][1] = 1; j[0][2] = 2;
+                j[1][0] = 3; j[1][1] = 4; j[1][2] = 5;
+                
+                document.write(c);
+                document.write("<p>" + d + "<p>");
+                document.write("j[0][0]= " + j[0][0] + ", j[0][1]= " + j[0][1] + 
+                        ", j[0][2]= " + j[0][2] + "<br>");
+                document.write("j[1][0]= " + j[1][0] + ", j[1][1]" + j[1][1] +
+                        ", j[1][2]" + j[1][2] + "<br>");
+                document.write("<p>h= " + (h[0] = "Hola") + "<p>");
+                document.write("i[0]= " + i[0] + ", i[1]= " + i[1] +
+                        ", i[2]= " + i[2] + "<p>");
+                document.write("Antes de ordenar: " + b.join(", ") + "<p>");
+                document.write("Ordenados: " + b.sort() + "<p>");
+                document.write("Ordenados en orden inverso: "+ b.sort().reverse());
+            }
+        </script>
+    </head>
+    <body>
+        
+        
+        <script>
+            a();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 78</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <form action="mailto:nobody@punto.es" method="post" name="ElPrimero">
+            Hola, soy el primer formulario del documento. Tengo algunos elementos: <p>
+                
+                caja 1:<input type="text" size="5" maxlength="10" name="Linea1"><br>
+                caja 2:<input type="text" size="5" maxlength="10" name="Linea2"><br>
+                caja 2:<input type="text" size="5" maxlength="10" name="Linea2"><br>            
+        </form></p>
+        
+        <form action="mailto:nobody@punto.es" method="get" name="ElSegundo"><p>
+            Hola, soy el segundo formulario del documento. Tengo algunos elementos: <br>
+                
+                <input type="radio" name="Radio1" value="a" checked>Radio 1<br>
+                <input type="radio" name="Radio1" value="b" checked>Radio 2<br>
+                <input type="radio" name="Radio1" value="c" checked>Radio 3<br>            
+                    </p></form>
+                    
+         <script>
+                 var i, j;
+                 
+                 document.write("Tenemos " + document.forms.length + " formularios en el documento.");
+                 
+                 for(i=0; i < document.forms.length; i++)
+                     with(document){
+                         write("<p>document.forms[' + i +'].name = " + forms[i].name  + "<br>");
+                         write("document.forms[' + i +'].action = " + forms[i].action + "<br>");
+                         write("document.forms[' + i +'].method = " + forms[i].method + "<br>");
+                         write("Tengo " + forms[i].elements.length + " elementos </p>");
+                         
+                         for(j=0; j < document.forms[i].elements.length; j++)
+                             write("document.forms['+ i +'].elements['+ j +'].name =" 
+                                 + forms[i].elements[j].name + "<br>");
+                     }
+         </script>
+    </body>
+</html>

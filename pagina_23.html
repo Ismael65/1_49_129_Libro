@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina 23</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var nombre, edad;
+            nombre = prompt("No te conozco, ¿cómo te llamas?", "");
+            edad = prompt("Y qué edad tienes", "");
+            edad = parseInt(edad);
+            if(edad < 18)
+                document.write("Vaya, " + nombre + " sólo tienes " + edad + " años");
+            else
+                document.write("No sabía que fueras mayor de edad, " + nombre);
+        </script>
+    </body>
+</html>
